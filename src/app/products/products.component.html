@@ -1,0 +1,48 @@
+<div class="container py-5">
+  <div class="row text-center mb-5">
+    <div class="col-lg-7 mx-auto">
+      <h1>Popular Products</h1>
+      <hr />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <!-- List group-->
+      <ul
+        *ngFor="let item of productList; let i = index"
+        class="list-group shadow"
+      >
+        <!-- list group item-->
+        <li class="list-group-item">
+          <!-- Custom content-->
+          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+            <div class="media-body order-2 order-lg-1">
+              <h5 class="mt-0 font-weight-bold mb-2">
+                <a class="btn">
+                  <img
+                    class="counter-image"
+                    src="../../assets/images/ui/arrow.png"
+                  /> </a>{{ item.votes }}
+              </h5>
+              <a class="font-weight-bold" href="{{ item.url }}">{{
+                item.title
+              }}</a>
+              <p class="font-weight-bold">
+                {{ item.description }}
+              </p>
+              <h6 class="text-muted mb-0 small">Submitted by:</h6>
+            </div>
+            <img
+              src="https://i.imgur.com/KFojDGa.jpg"
+              alt="Generic placeholder image"
+              width="200"
+            />
+          </div>
+          <!-- End -->
+        </li>
+        <!-- End -->
+      </ul>
+      <!-- End -->
+    </div>
+  </div>
+</div>

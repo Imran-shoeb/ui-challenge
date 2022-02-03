@@ -1,0 +1,18 @@
+.text-gray {
+    color: #aaa
+}
+
+img {
+    height: 170px;
+    width: 140px
+}
+
+.counter-image{
+    height: 50px;
+    width: 40px;
+}
+
+.btn {
+    margin: 0px;
+    padding: 0px;
+}
