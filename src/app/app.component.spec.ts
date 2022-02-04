@@ -15,12 +15,14 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
+  //testing creation of Appcomponent
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
+  //testing the title of the app
   it(`should have as title 'ui-challenge'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;

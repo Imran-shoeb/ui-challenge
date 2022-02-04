@@ -1,48 +1,67 @@
+<!-- container starts-->
 <div class="container py-5">
   <div class="row mb-5">
     <div class="col-lg-7 mx-auto">
+      <!-- Header title-->
       <h1 class="text-center font-weight-bold">Popular Products</h1>
+
+      <!-- separating product list from the header -->
       <hr class="mt-0" />
       <div class="row">
         <div *ngFor="let item of productList; let i = index">
-            <!-- list group item-->
-              <div
-                class="media align-items-lg-center flex-column flex-lg-row p-3"
-              >
+          <!-- product list starts -->
+          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+            <!-- product image starts-->
+            <img
+              class="product-image"
+              src="../../assets/{{ item.productImageUrl }}"
+              alt="{{ item.title }}"
+            />
+            <!-- product image ends-->
+
+            <!-- product details starts-->
+            <div class="media-body order-2 ml-4">
+              <!-- arrow image button to increament the vote count. passing id of the product to the function -->
+              <h5 class="mt-0 mb-0 font-weight-bold">
+                <a class="btn m-0 p-0 vote" (click)="increment(item.id)">
+                  <img
+                    class="counter-image"
+                    src="../../assets/images/ui/arrow.png"
+                  /> </a
+                >{{ item.votes }}
+              </h5>
+              <!-- arrow image ends-->
+
+              <!-- product title starts-->
+              <h5 class="font-weight-bold mb-0">
+                <a href="{{ item.url }}">{{ item.title }}</a>
+              </h5>
+              <!-- product title ends-->
+
+              <!-- product description starts-->
+              <h6>
+                {{ item.description }}
+              </h6>
+              <!-- product description ends-->
+
+              <!-- avatar starts-->
+              <h6 class="text-muted mb-0">
+                Submitted by:
+                <!-- avatar rounded image -->
                 <img
-                  class="product-image"
-                  src="../../assets/{{ item.productImageUrl }}"
-                  alt="{{ item.title }}"
-                  width="200"
+                  class="avatar-image rounded-circle"
+                  src="../../assets/{{ item.submitterAvatarUrl }}"
+                  alt="Submitter"
                 />
-                <div class="media-body order-2 ml-4">
-                  <h5 class="mt-0 mb-0 font-weight-bold">
-                    <a class="btn vote" (click)="increment(item.id)">
-                      <img
-                        class="counter-image"
-                        src="../../assets/images/ui/arrow.png"
-                      /> </a
-                    >{{ item.votes }}
-                  </h5>
-                  <h5 class="font-weight-bold mb-0">
-                    <a href="{{ item.url }}">{{ item.title }}</a>
-                  </h5>
-                  <h6>
-                    {{ item.description }}
-                  </h6>
-                  <h6 class="text-muted mb-0">
-                    Submitted by:
-                    <img
-                      class="avatar-image rounded-circle"
-                      src="../../assets/{{ item.submitterAvatarUrl }}"
-                      alt="Submitter"
-                    />
-                  </h6>
-                </div>
-              </div>
-              <!-- End -->
+              </h6>
+              <!-- avatar ends-->
+            </div>
+            <!-- product details ends-->
+          </div>
+          <!-- product list Ends -->
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- container ends-->

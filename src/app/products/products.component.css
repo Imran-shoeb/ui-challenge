@@ -1,24 +1,18 @@
-.text-gray {
-    color: #aaa
-}
-
+/*styling for the product image */
 .product-image {
     height: 100px;
     width: 110px;
     border-radius: 3px;
 }
 
+/*styling for the counter image button */
 .counter-image{
     height: 50px;
     width: 40px;
 }
 
+/*styling for the avatar image */
 .avatar-image {
     height: 30px;
     width: 30px
-}
-
-.btn {
-    margin: 0px;
-    padding: 0px;
 }
