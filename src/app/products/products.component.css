@@ -2,14 +2,20 @@
     color: #aaa
 }
 
-img {
-    height: 170px;
-    width: 140px
+.product-image {
+    height: 100px;
+    width: 110px;
+    border-radius: 3px;
 }
 
 .counter-image{
     height: 50px;
     width: 40px;
+}
+
+.avatar-image {
+    height: 30px;
+    width: 30px
 }
 
 .btn {
