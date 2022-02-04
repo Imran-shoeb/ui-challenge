@@ -1,14 +1,10 @@
-# UiChallenge
+# Ui-Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+This project was generated with [Angular CLI] version 13.2.2.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -16,12 +12,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Karma]
 
-## Running end-to-end tests
+## Design choices
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- It has all of the functionalities that the requirements state.
+- Used Bootstrap 4 for designing the UI to make the UI responsive to all devices.
+- All the external assests are stored in the `src/assests` folder.
+- Created `product` component for modularity.
+- Added `routing` for components.
+- Tried to make the UI as perfect as the requirement. 
+- Used utility-based approach to design the webpage with the help of Bootstrap.
+- Created a service to store and utilize the Seed data assuming fetching data from the backend API.
+- Kept the code simple and made appropriate comments for readability.
+- Added unit tests to test some parts of the UI and service call.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
